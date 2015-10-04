@@ -35,9 +35,10 @@ public class Methods extends Object {
 		/************************************************
 		 * Your work goes here
 		 ************************************************/
-
-		// You are free to modify the return statement
-		return false;
+        
+        
+        return !original ;
+        
 	}
 
 	/*
@@ -54,13 +55,22 @@ public class Methods extends Object {
 	 *
 	 * @param numbers The array consisting of values whose
 	 * 		  sign must be flipped
-	 * @return nothing
+	numbers = {-1, 45, 65, -23, 8}
+     * @return nothing
 	 */
 	public void flipTheSign(int[] numbers) {
 		/************************************************
 		 * Your work goes here
 		 ************************************************/
-	}
+        
+        for (int i = 0 ; i<numbers.length; i++){
+            numbers[i] = numbers[i]* -1;
+            
+        }
+	
+    
+    
+    }
 
 
 	/*
@@ -91,8 +101,18 @@ public class Methods extends Object {
 		 * Your work goes here
 		 ************************************************/
 
-		// You are free to modify the return statement
-		return new boolean [0];
+        boolean [] someBool = new boolean [someNumbers.length];
+        for(int i =0; i < someNumbers.length; i++) {
+            
+            if (someNumbers[i] >= floor) {
+                someBool[i] = true;
+            }else {
+                someBool[i] = false;
+            }
+            
+        
+        }
+        return someBool;
 	}
 
 	/*
@@ -117,9 +137,30 @@ public class Methods extends Object {
 		/************************************************
 		 * Your work goes here
 		 ************************************************/
-
-		// You are free to modify the return statement
-		return new int[2];
+        
+    
+        
+        
+        //compare first index
+        int min = someNumbers[0];
+        int max = someNumbers [0];
+        
+            for (int i = 0; i < someNumbers.length; i++) {
+            
+                if (someNumbers[i] > max){
+                    max = someNumbers[i];
+                } else if (someNumbers[i] < min){
+                    min = someNumbers[i];
+                }
+                
+            }
+        
+        
+        int [] array = new int[2];
+        array[0] = min;
+        array [1] = max;
+        return array;
+		
 	}
 
 
